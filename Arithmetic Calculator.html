@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate()
+        {
+               var value1,value2,op;
+               value1=document.getElementById("val1").value;
+               value2=document.getElementById("val2").value;
+               op=document.getElementById("op").value;
+               if(op == "+")
+               {  
+                document.getElementById("result").value= parseInt(value1) + parseInt(value2);
+               }
+               else if(op == "-")
+               {
+                document.getElementById("result").value= value1 - value2;
+               }
+               else if(op == "*")
+               {
+                document.getElementById("result").value= value1 * value2;
+               }
+               else
+               {
+                document.getElementById("result").value= value1 / value2;
+               }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <div style="background-color:whitesmoke;color:red;" align="center"><h1>Arithmetic calculator</h1></div>
+        value1: &emsp; <input type="number" placeholder=" value1" id="val1" >&emsp;
+        <br><br>
+        value2:&emsp; <input type="number" placeholder=" value2" id="val2">&emsp;
+        <br><br>
+        operator: <select name="combo"  id="op">
+        <option> Select</option>
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+         <option>/</option>
+        </select>
+        <input type="button" value="Calculate" onclick="calculate()">
+        <input type="reset" value="Reset" ><br><br>
+        Result:&emsp; <input id="result" placeholder="Result">&emsp;
+        <br><br></form>
+</body>
+</html>
