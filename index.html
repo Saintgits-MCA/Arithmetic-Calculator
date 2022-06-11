@@ -33,11 +33,11 @@
 <body>
     <form>
         <div style="background-color:whitesmoke;color:red;" align="center"><h1>Arithmetic calculator</h1></div>
-        value1: &emsp; <input type="number" placeholder=" value1" id="val1" >&emsp;
+        value1: &emsp; <input type="number" placeholder=" value1" id="val1" required="">&emsp;
         <br><br>
-        value2:&emsp; <input type="number" placeholder=" value2" id="val2">&emsp;
+        value2:&emsp; <input type="number" placeholder=" value2" id="val2" required="">&emsp;
         <br><br>
-        operator: <select name="combo"  id="op">
+        operator: <select name="combo"  id="op" required="">
         <option> Select</option>
         <option>+</option>
         <option>-</option>
@@ -46,7 +46,7 @@
         </select>
         <input type="button" value="Calculate" onclick="calculate()">
         <input type="reset" value="Reset" ><br><br>
-        Result:&emsp; <input id="result" placeholder="Result">&emsp;
+        Result:&emsp; <input readonly type="text" id="result" placeholder="Result">&emsp;
         <br><br></form>
 </body>
 </html>
